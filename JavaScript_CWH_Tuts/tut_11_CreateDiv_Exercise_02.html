@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Editable Div - Exercise 02</title>
+</head>
+
+<body>
+
+    <h1>Create Editable Div - Exercise 02</h1>
+    <div class="container">
+        <div class="child" id="first"></div>
+    </div>
+    <script>
+        /*
+        Exercise 02 :
+
+        You have to create div and inject it into the page which contains a heading, whenever someone clicks on the div, it should converted into an editable item. Whenever user clicks away save the node into the localstorage. 
+        
+        */
+
+        //Create a new element
+        let div = document.createElement("div");
+
+        //Add a new text in that created element
+        let val = localStorage.getItem("text");
+        let text;
+        if (val == null) {
+
+            text = document.createTextNode("This is my text element. Click on it to edit");
+        }
+        else {
+            text = document.createTextNode(val);
+        }
+
+        div.appendChild(text);
+
+        //Set some attributes into the created element - id, style, class
+        div.setAttribute('id', 'elem');
+        div.setAttribute('class', 'elemClass');
+        div.setAttribute('style', 'border:2px solid black; width:154px; margin:34px; padding:23px;');
+
+        //Grab the main container
+        let container = document.querySelector(".container");
+        let first = document.getElementById("first");
+
+        //Insert the element before element with the id first
+        container.insertBefore(div, first);
+
+        //add the event listener to the div element
+        div.addEventListener('click', function (e) {
+            let noTextarea = document.getElementsByClassName("textarea").length;
+            if (noTextarea == 0) {
+
+                let html = elem.innerHTML;
+                div.innerHTML = `<textarea class="form-control textarea" id="textarea" row="3">${html}</textarea>`;
+            }
+
+            //listen for the blur event on the textarea
+            let textarea = document.getElementById("textarea");
+            textarea.addEventListener('blur', function (e) {
+                elem.innerHTML = textarea.value;
+                localStorage.setItem("text", textarea.value);
+            })
+
+        })
+
+    </script>
+</body>
+
+</html>

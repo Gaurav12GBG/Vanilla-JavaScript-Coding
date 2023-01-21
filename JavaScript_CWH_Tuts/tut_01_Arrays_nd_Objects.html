@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays In JS</title>
+</head>
+
+<body>
+    <h2>Arrays In JS</h2>
+    <script>
+        const marks = [14, 85, 96, 53, 60];
+        const fruits = ["Apple", "banana", "onion", "cherry", "Grapes"];
+        const mixed = ["str", 89, [90, 95]];
+
+        const arr = new Array(23, 123, 2420, "Orange");
+        console.log(arr);
+        // console.log(marks);
+        // console.log(fruits);
+        // console.log(mixed);
+
+        // console.log("The length of arr is " + arr.length);
+        // console.log("The length of marks is " + marks.length);
+        // console.log("The length of fruits is " + fruits.length);
+        // console.log("The length of mixed is " + mixed.length);
+
+        arr[0] = "Gaurav";
+        console.log(arr);
+
+        let value = marks.indexOf(85);
+        console.log(value);
+
+        //Mutating OR modifying Arrays
+        marks.push(25555);
+        marks.unshift(52222);
+        console.log(marks);
+
+        marks.shift();   // remove the first element
+        console.log(marks);
+
+        marks.splice(0, 3) // remove element from 0 to 2
+        console.log(marks);
+
+        marks.reverse();
+        console.log(marks);
+
+        let marks2 = [1, 2, 3, 4];
+        // marks = marks.concat(marks2);
+        // console.log(marks);
+
+        //Objects
+
+        let myObj = {
+            name : "Gaurav",
+            age : 25,
+            place : "Chandwad",
+            isActive : true,
+            marks : [1, 2, 3, 5]
+        }
+
+        console.log(myObj);
+        console.log(myObj.isActive);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Html To JS</title>
+</head>
+<body>
+    <div id="intro">
+        <p>This is a tutorial for changing the properties of the HTML to JS</p>
+    </div>
+
+    <script>
+       let elem = document.getElementById("intro");
+
+       let content = elem.innerHTML;
+
+       elem.innerHTML = "<h2>Hi gaurav@</h2>";
+
+       let h1 = document.createElement('h1');
+
+       h1.className = "try pi";
+       h1.id = "intro1";
+
+    //    let text = document.createTextNode("This is a hy1 tag");
+    //    h1.appendChild(text);
+
+        h1.textContent = "Hi My name iosn gaurav bharqat ganbgurde111";
+
+    //    elem.appendChild(h1);
+
+       document.body.appendChild(h1);
+
+    </script>
+</body>
+</html>

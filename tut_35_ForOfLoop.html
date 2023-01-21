@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For...Of in JS</title>
+</head>
+
+<body>
+    <h2>
+        for...of Loop in JS - Features from ES6
+    </h2>
+    <p>In this features, It is not needed to specify the particular string or array length for iterating the loop.
+        basically, In normal array it is needed.</p>
+    <pre>
+        let scores = [80, 95, 65, 48];
+
+        for (const x of score) {
+            console.log(x);
+        }
+
+    </pre>
+
+    We can used it for string also,
+    <pre>
+
+        let str = ["gaurav", "raghav", "amar", 'harry'];
+
+        for(let x of str){
+            console.log(x);
+        }
+    </pre>
+
+    <script>
+        let scores = [80, 95, 65, 48];
+
+        for (const x of scores) {
+            console.log(x);
+        }
+
+        let str = ["gaurav", "raghav", "amar", 'harry'];
+
+        for (let x of str) {
+            console.log(x);
+        }
+    </script>
+</body>
+
+</html>

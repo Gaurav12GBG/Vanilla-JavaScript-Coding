@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Literals</title>
+</head>
+<body>
+    <h2>Template Literals - Features from ES6</h2>
+    <p>Template Literal does not work in double/single quote, It is work in only backtick(``).</p>
+    <pre>
+        <b>Basically we are writing the string as follows,</b>
+        
+        let str = "Hello World";
+        console.log(str);
+
+        <b>if we have to write both the words in new line then we are using \n for that as follows,</b>
+
+        let str = "Hello\nWorld";
+        console.log(str);
+
+        <b>We are creating the string using backtick and which is also called as template literals.
+        We can write whatever format we want as like that,</b>
+
+        <b>e.g 01:</b>
+
+        let str = `Hello
+                   World`;
+
+        <b>Output should be,</b>
+
+        Hello
+        World
+
+        <b>e.g 02:</b>
+
+        <b>Normally we can used like,</b>
+        str = "gaurav";
+        console.log("My name is" + str + ".");
+
+        <b>Using template Literals,</b>
+
+        str = "gaurav";
+        console.log(`my name is ${str}. Thank you.`);
+
+
+
+    </pre>
+    <script>
+        let str = "Hello World";
+        let str = 'Hello World';
+
+        let str = `Hello
+                   World`;
+
+                   
+        str = "gaurav";
+        console.log("My name is" + str + ".");
+
+        
+        str = "gaurav";
+        console.log(`my name is ${str}. Thank you.`);
+    </script>
+</body>
+</html>

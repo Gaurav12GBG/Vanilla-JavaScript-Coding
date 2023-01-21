@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread operator</title>
+</head>
+
+<body>
+    <h2>Spread Operator - feature of ES6</h2>
+    <p>for e.g we have an two arrays and we want include both that time we can used spread operator as follows,
+
+    <pre>
+        let arr1 = [1, 2, 3];
+
+        let arr2 = [4, 5, 6];
+    
+        let arr3 = [...arr1, ...arr2];
+    
+        console.log(arr3);
+    </pre>
+
+    If we have add after 5 the and before 6,
+
+    <pre>
+        let arr4 = [4, 5, ...arr1, 6]
+        console.log(arr4);
+        </pre>
+
+    </p>
+
+    <script>
+        let arr1 = [1, 2, 3];
+
+        let arr2 = [4, 5, 6];
+
+        let arr3 = [...arr1, ...arr2];
+
+        console.log(arr3);
+
+        let arr4 = [4, 5, ...arr1, 6]
+
+        console.log(arr4);
+    </script>
+</body>
+
+</html>

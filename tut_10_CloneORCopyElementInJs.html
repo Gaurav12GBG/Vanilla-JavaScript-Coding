@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clone Or Copy Element</title>
+</head>
+<body>
+    <ul id="menu">
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+        <li>Services</li>
+    </ul>
+
+    <script>
+        let menu = document.getElementById("menu");
+
+        let cloneEle = menu.cloneNode(true); //when your writing true then all the content with child Element are copied.
+        console.log(cloneEle);
+
+        let body = document.body;
+
+        body.appendChild(cloneEle);
+    </script>
+</body>
+</html>

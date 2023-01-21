@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Navbar</title>
+    <style>
+        body{
+            margin:0px;
+        }
+
+        #header{
+            text-align: center;
+        }
+
+        #logo{
+            width: 250px;
+            height: auto;
+        }
+
+        #menu-bar{
+            text-align: center;
+            background-color: cadetblue;
+        }
+
+        #menu-bar li{
+            display:inline-block;
+            padding: 15px 10px;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        #container{
+            text-align: center;
+            padding: 50px 100px;
+        }
+
+        #about-img{
+            width: 100%;
+        }
+
+        #menu-bar Li:hover{
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        footer{
+            background-color: cadetblue;
+            text-align: center;
+            color: white;
+            padding: 50px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .sticky{
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        h1{
+            text-align: center;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <img src="https://www.logodesign.net/images/nature-logo.png" id ="logo" alt="">
+    </div>
+    <nav id="menu-bar">
+        <li>Home</li>
+        <li>About Us</li>
+        <li>Our Team</li>
+        <li>Client</li>
+        <li>Career</li>
+        <li>Services</li>
+        <li>Contact Us</li>
+    </nav>
+
+    <div id="container">
+        <h1>About Us</h1>
+        <img src="https://www.susangreenecopywriter.com/wp-content/uploads/2013/01/iStock_000039291924_Medium.jpg"
+            alt="" id="about-img">
+        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, ipsa! Modi exercitationem
+            dolore saepe aliquam, itaque repellendus. Laudantium nesciunt esse nihil. Pariatur consequatur quos saepe.
+            Fugit ratione ad iste? Accusantium fugiat eius reiciendis quas necessitatibus, voluptas incidunt assumenda
+            veritatis sequi repudiandae? Recusandae autem magni cum est, incidunt temporibus molestiae veritatis. Ut
+            earum saepe dolore ducimus eligendi quae rem impedit nisi quaerat nulla iusto distinctio blanditiis deserunt
+            dignissimos ad perspiciatis excepturi alias debitis et quia, architecto cum aperiam possimus est! Provident
+            reiciendis enim veritatis maiores inventore ducimus! Asperiores quas voluptas, sed odit cum beatae totam
+            provident porro. Iure voluptate maxime qui modi cum, labore impedit reiciendis autem blanditiis. Placeat
+            harum vero enim, a dolorem sapiente, cumque alias accusamus fugit quos illo ullam veritatis quam doloribus
+            voluptatem pariatur? Deleniti aperiam totam commodi at maiores distinctio, vero eius in inventore debitis
+            perspiciatis, earum ut hic. Repudiandae inventore qui maxime libero aliquid. Hic, quibusdam! Ex aspernatur
+            optio rerum, dolorum quas neque? Quo eaque voluptatem magni magnam ut repellat totam unde nihil culpa, dicta
+            impedit nostrum a asperiores nemo corrupti nesciunt nobis sed laudantium temporibus ullam consequuntur animi
+            fuga? Rerum vero libero veritatis quaerat dolor unde. Praesentium earum molestiae animi adipisci
+            consequatur. Omnis sit eaque cupiditate, quaerat, laborum ipsam voluptas odio, ex dignissimos ducimus unde
+            quam! Ullam illum provident incidunt earum distinctio molestiae aperiam sit omnis dolores, itaque ipsam
+            possimus cum perferendis asperiores magni quo non, doloremque, soluta recusandae aliquid quisquam in optio
+            corrupti? Cupiditate cum necessitatibus quis veniam saepe a sequi laborum deserunt at.</p>
+    </div>
+
+    <footer>
+        <p>@2022, www.NatureLogoWin/organize.com@@</p>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function(){
+            let navbar = document.getElementById("menu-bar");
+
+            if(window.pageYOffset >= 190){
+
+                navbar.classList.add('sticky');
+            }else{
+                navbar.classList.remove('sticky');
+            }
+        });
+    </script>
+</body>
+
+</html>

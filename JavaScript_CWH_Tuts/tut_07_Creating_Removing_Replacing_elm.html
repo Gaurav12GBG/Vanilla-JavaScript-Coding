@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating, Removing and Replacing Elements.</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Welcome To Code Made Trickers</h1>
+        <div class="child" id="first">Child 1
+            <ul class="this" id="myul">
+                <li class="childul">I am</li>
+                <li class="childul">Gaurav</li>
+                <li id='li3' class="childul">Bharat</li>
+                <li class="childul">Gangudre</li>
+                <li class="childul">from chandwad.</li>
+            </ul>
+        </div>
+        <div class="child" id="second">Child 2</div>
+        <div class="child" id="third">Child 3</div>
+        <div class="child" id="fourth">Child 4</div>
+
+        <form action="">
+            <label>Search this website :</label>
+            <input type="text" id="text">
+            <input type="submit" id="btn" value="Search">
+        </form>
+    </div>
+
+    <div class="no">This is a Div 1</div>
+    <div class="no">This is a Div 2</div>
+    <div class="no">This is a Div 3</div>
+
+    <script>
+
+        //Create Element
+        let element = document.createElement("li");
+        let text = document.createTextNode("I am a text node");
+        element.appendChild(text);
+        //Add a className and id to the li element
+
+        element.className = "childul";
+        element.id = "createdLi";
+        element.setAttribute('title', 'myTitle');
+
+        let ul = document.querySelector("ul.this");
+        console.log(ul);
+
+        // element.innerText = "Hello This is created by GBG dynamically";
+        // element.innerHTML = "<strong>Hello This is created by GBG dynamically</strong>";
+
+        ul.appendChild(element);
+
+        //Replace Element
+
+        let elemn2 = document.createElement('h3');
+        elemn2.id = 'headingId';
+        elemn2.className = 'headingClass';
+        let text2 = document.createTextNode("This is a created node for replacing");
+
+        elemn2.appendChild(text2);
+        element.replaceWith(elemn2);
+
+        let myul = document.getElementById('myul');
+        myul.replaceChild(element, document.getElementById('li3'));
+
+        let pr = elemn2.getAttribute('id');
+        // pr = elemn2.hasAttribute('id');  //checkout id is there or not
+        
+        elemn2.removeAttribute("id");
+        pr = elemn2.hasAttribute('id');  //checkout id is there or not
+        elemn2.setAttribute('title', 'myelemn2Title');
+
+
+
+        console.log(elemn2, pr);
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select A Element By Id</title>
+</head>
+<body>
+<ul>
+    <li>list 1</li>
+    <li id="l2">list 2</li>
+    <li id="l3"></li>
+    </p>
+</ul>
+
+<script>
+    let l2 = document.getElementById("l2");
+    let l3 = document.getElementById("l3");
+    l2.innerHTML = "<button onclick='new1()' style='background-color:green;color:white;cursor:pointer;margin:10px 0ox;'>Send OTP</button>"
+
+    function new1(){
+        l3.innerHTML =  "<input type='text' placeholder='Enter OTP'><br><button type='submit'  style='background-color:blue;color:white;width:110px;cursor:pointer;margin-top:5px;'>Verify Otp</button>";
+    }
+   
+</script>
+</body>
+</html>

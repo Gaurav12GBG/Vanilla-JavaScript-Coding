@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date and Time Object In JS</title>
+</head>
+<body>
+<script>
+    let today = new Date();
+    console.log(today);
+    // console.log(typeof today);
+
+    let otherDate = new Date("8-4-2002 04:54:08");
+    // otherDate = new Date("June 12 2008");
+    // otherDate = new Date("06/18/1962"); //  mm/dd/yy
+    // console.log(otherDate);
+
+    let a = otherDate.getDate();
+     a = otherDate.getDay();
+     a = otherDate.getTime();
+     a = otherDate.getMinutes();
+     a = otherDate.getHours();
+     a = otherDate.getMilliseconds();
+     a = otherDate.getMonth();
+
+     otherDate.setDate(23);
+     otherDate.setMonth(2);
+     console.log(otherDate);
+    console.log(a);
+
+    </script>
+</body>
+</html>

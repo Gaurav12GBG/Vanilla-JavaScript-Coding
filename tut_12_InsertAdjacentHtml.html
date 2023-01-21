@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Adjucent HTML</title>
+</head>
+<body>
+    <!--Before Begin-->
+    <div id="intro">    <!--Selected-->
+        <!--After Begin-->
+        <h2>Heading</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus sunt aspernatur, animi quae amet suscipit quidem illo mollitia error iure.</p>
+        <!--Before End-->
+    </div>
+    <!--After End-->
+
+    <script>
+        let elm = document.getElementById("intro");
+
+        let html = "<h1>Gaurav</h1>";
+        elm.insertAdjacentHTML('beforebegin', html )
+        elm.insertAdjacentHTML('afterbegin', html )
+        elm.insertAdjacentHTML('beforeend', html )
+        elm.insertAdjacentHTML('afterend', html )
+    </script>
+</body>
+</html>

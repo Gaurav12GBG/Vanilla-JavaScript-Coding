@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Distructuring - features of ES6</title>
+</head>
+<body>
+    <h2>
+        Array Distructuring - Advanced features of Es6
+    </h2>
+    <p>We can write number of lines in one line as follws,</p>
+    <pre>
+        Normally We are write as follows,
+
+        
+        let book = ["Advanced JS", "RS Agarwal", "M3-DOM", "Ordinary Grammer"];
+
+        let b1 = book[0];
+        let b2 = book[1];
+        let b3 = book[2];
+        let b4 = book[3];
+        
+        for the same work we can used array distructuring advanced feature of ES6,
+        
+        let[b1, b2, b3, b4] = book; //finished in one line only
+
+        if we are giving the extra variable but the value for that variable not mentioned in array then it initiatites it as undefined, it does not give any error.
+        let[b1, b2, b3, b4, b5, b6] = book;
+
+
+        Here, for b5 and b6 does not have any value in book array.
+        We can give default value for b5 and b6 as follows,
+
+        let[b1, b2, b3, b4, b5="Morals", b6="Novels"] = book;
+
+        For the nested array,
+        
+        let book = ["Advanced JS", "RS Agarwal", "M3-DOM", "Ordinary Grammer", ["Morals", 2022], "Novels"];
+        let[b1, b2, b3, b4, [b5, year], b6] = book;
+        
+
+        console.log(b1);
+        console.log(b2);
+        console.log(b3);
+        console.log(b4);
+        console.log(b5);
+        console.log(b6);
+
+        Now array distructuring using function as follows,
+
+        function books(){
+            // return "book";
+            return ["ADV", 200];
+        }
+
+        // let name = books();
+        // console.log(name);
+
+        let[booktitle, price] = books();
+        console.log(booktitle);
+        console.log(price);
+
+       
+
+
+
+    </pre>
+
+    <script>
+        // let book = ["Advanced JS", "RS Agarwal", "M3-DOM", "Ordinary Grammer"];
+        let book = ["Advanced JS", "RS Agarwal", "M3-DOM", "Ordinary Grammer", ["Morals", 2022], "Novels"];
+
+        // let b1 = book[0];
+        // let b2 = book[1];
+        // let b3 = book[2];
+        // let b4 = book[3];
+
+        // let[b1, b2, b3, b4] = book;
+
+        // let[b1, b2, b3, b4, b5, b6] = book;
+
+        // let[b1, b2, b3, b4, b5="Morals", b6="Novels"] = book;
+
+        // for the nested array
+
+        let[b1, b2, b3, b4, [b5, year], b6] = book;
+
+
+        console.log(b1);
+        console.log(b2);
+        console.log(b3);
+        console.log(b4);
+        console.log(b5);
+        console.log(year);
+        console.log(b6);
+
+        function books(){
+            // return "book";
+            return ["ADV", 200];
+        }
+
+        // let name = books();
+        // console.log(name);
+
+        let[booktitle, price] = books();
+        console.log(booktitle);
+        console.log(price);
+    </script>
+</body>
+</html>

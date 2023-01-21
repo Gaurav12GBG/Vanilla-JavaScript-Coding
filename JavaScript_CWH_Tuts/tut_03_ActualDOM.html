@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actual DOM</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome To Code Made Trickers</h1>
+        <div class="child" id="first">Child 1</div>
+        <div class="child" id="second">Child 2</div>
+        <div class="child" id="third">Child 3</div>
+        <div class="child" id="fourth">Child 4</div>
+
+        <form action="">
+            <label>Search this website :</label>
+            <input type="text">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+    
+    <script>
+        let firstChild = document.getElementById("first");
+        firstChild.innerHTML = "<h5 style='color:red;'>Extra Spacing</h5>";
+
+    </script>
+</body>
+</html>

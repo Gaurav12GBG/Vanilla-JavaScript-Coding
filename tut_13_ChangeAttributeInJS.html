@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Attribute In JS</title>
+</head>
+<body>
+    <button id="btn" name="form1">Send</button>
+
+    <script>
+        let btn = document.getElementById('btn');
+
+        // btn.setAttribute("name", "form1");
+        btn.setAttribute("class", "new1");
+
+        let val = btn.getAttribute("name");
+        
+        //Removing
+        
+        btn.removeAttribute("name");
+
+        let response = btn.hasAttribute("class");
+        console.log(response);
+    </script>
+</body>
+</html>

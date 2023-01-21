@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM SELECTORS</title>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <h1>Welcome To Code Made Trickers</h1>
+        <div class="child" id="first">Child 1</div>
+        <div class="child" id="second">Child 2</div>
+        <div class="child" id="third">Child 3</div>
+        <div class="child" id="fourth">Child 4</div>
+
+        <form action="">
+            <label>Search this website :</label>
+            <input type="text" id="text">
+            <input type="submit" id="btn" value="Search">
+        </form>
+        <div id="search"></div>
+    </div>
+
+    <script>
+        /* 
+        There are two type of element selectors :
+        1. single Element Selector
+        2. Multiple Element Selectors
+         */
+        // console.log(document.all);
+
+        //**********************************SINGLE ELEMENT SELECTOR**********************************
+
+        let element = document.getElementById("first");
+        let btn = document.getElementById("btn");
+        let search = document.getElementById("search");
+
+        // element = element.className;
+        // element = element.childNodes;
+        // element = element.parentNode;
+
+        element.style.color = 'red';
+        document.body.style.backgroundColor = "darkblue";
+        document.body.style.color = "white";
+        btn.style.backgroundColor = "green";
+        // console.log(element);
+
+        btn.addEventListener('click', (e) => {
+
+            if (document.getElementById('text').value != "") {
+
+                search.innerHTML = `<h2 style='color:white'>Search Results</h2><br>
+                            <div style="border:2px solid white;padding:10px;width:50%;background-color:darkgreen;"><p>Hi my name is gaurav bharat gangurde. I am bachelor of engineering student specilized in IT with an overall cgpa 8.69. I have a intermediate knowledge of javascript.</p>
+                            <button style="background-color:red;padding:10px;color:white;">More About</button>
+                            </div>`;
+                e.preventDefault(true);
+            }
+            else {
+                search.innerHTML = " ";
+            }
+
+        });
+
+        // let sel = document.querySelector("#second");
+        // let sel = document.querySelector(".child");
+        sel = document.querySelector('div');
+        sel.style.color = "yellow";
+        console.log(sel);
+
+        //************************************MULTIPLE ELEMENT SELECTOR***********************************
+
+        // let elems = document.getElementsByClassName("child");
+        // let elems = document.getElementsByClassName("container");
+        // console.log(elems[0].getElementsByClassName('child'));
+
+        let elems = document.getElementsByTagName("div");
+
+        // for(let x of elems){
+        //     x.style.fontWeight = "bold";
+        // }
+
+        Array.from(elems).forEach(element => {
+            element.style.color = "black";
+        });
+        
+        console.log(elems);
+
+
+
+    </script>
+
+</body>
+
+</html>

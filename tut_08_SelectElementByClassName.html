@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Element By Class Name</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style: none;
+            background-color: crimson;
+            color: white;
+        }
+
+        .linav {
+            display: flex;
+            margin-left: 35px;
+        }
+
+        ul .linav li {
+            margin: 15px;
+        }
+
+        ul .linav li:hover{
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .container{
+            margin:10px 100px;
+        }
+
+        section{
+           
+            padding: 10px;
+        }
+
+        h1{
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .container h2{
+            margin: 10px;
+        }
+
+        .textarea1{
+            margin: 15px 0px;
+        }
+
+        .container .textarea1 textarea{
+            width: 100%;
+        }
+
+        .btn1{
+            background-color: darkblue;
+            color: white;
+            font-size: 15px;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        .btn2{
+            background-color: red;
+            color: white;
+            
+            font-size: 15px;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        footer{
+            background-color: crimson;
+            padding: 70px;
+            margin-top: 25px;
+
+        }
+
+        footer h5{
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <div class="linav">
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Services</li>
+        </div>
+    </ul>
+
+    <div class="container">
+        <section id="sec">
+        <h1>Home Page</h1>
+        <h2>Heading 1</h2>
+        <p class="intreo">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque animi quibusdam quis modi vel, sapiente necessitatibus harum officiis at ratione rerum veniam ullam incidunt reprehenderit deleniti tempore numquam vero amet! Earum velit harum nesciunt non quis, laboriosam, et libero magni, natus saepe ipsum at architecto corrupti soluta perferendis eius fugit?</p>
+        <h2 id="sech2">Heading 2</h2>
+        <p class="intreo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam voluptatum unde praesentium maiores debitis aperiam natus, a optio culpa, totam officia dolores, facere eaque nostrum dolor deleniti quos incidunt at molestiae voluptates error! Excepturi ducimus illum error eligendi accusamus, laborum recusandae accusantium, rem officiis unde corporis, perspiciatis atque minima nemo.</p>
+        <h2>Heading 3</h2>
+        <p class="intreo">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam nulla deleniti eius sequi assumenda, doloribus ab reprehenderit earum culpa, delectus neque eveniet dolores commodi, rerum nihil qui? Quia atque fugiat et debitis inventore cum ratione doloribus temporibus libero numquam cupiditate, odit laboriosam molestiae culpa cumque accusantium placeat minima. Labore, numquam!</p>
+    </section>
+
+    <div class="textarea1">
+        <textarea name="text" id="text" cols="30" rows="10"></textarea>
+        <button type="submit" class="btn1" onclick="aa()">Submit</button>
+        <button type="reset" class="btn2" onclick="a()">Reset</button>
+    </div>
+    </div>
+
+    <footer>
+        <h5>@2021.WWW.INCB!!.com/org.net</h5>
+    </footer>
+
+    <script>
+        let text = document.getElementById("text");
+        let sech2 = document.getElementById("sech2");
+        let new1 = document.getElementByClassName("intreo");
+
+        
+        function aa(){
+            let newvar = text.value;
+            sech2.innerHTML = newvar;
+        }
+
+        function a(){
+            text.value = "";
+        }
+
+        
+        for(let i=0;i<new1.length;i++){
+            new1.innerHTML = "<p>finished</p>";
+        }
+        
+        
+    </script>
+</body>
+
+</html>

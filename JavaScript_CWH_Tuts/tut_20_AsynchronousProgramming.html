@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous Programming</title>
+</head>
+
+<body>
+    <h2>Asynchronous programming</h2>
+
+    <script>
+
+        /* 
+        Asynchronous Programming :
+        1. Synchronous VS Asynchronous programming
+            1. An asynchronous model allows multiple things to happen at the same time.
+            2. In a synchronous programming language things happen one at a time.
+            3. When you call a function that performs a long action it returns only when the action has finished so that it
+               can return the result.
+            4. This stops your program for the time the action takes.
+
+        2. Three Ways of writing asynchronous code in JS :
+            1. async/await
+            2. callbacks
+            3. promises
+        
+         */
+
+        console.log("This is a asynchronous programming...");
+
+        setTimeout(() => {
+            for (let index = 1; index < 45; index++) {
+                const element = index;
+                console.log("This is a element " + index);
+            }
+        }, 100);
+
+        console.log("Done printing");
+
+        
+
+
+    </script>
+
+</body>
+
+</html>

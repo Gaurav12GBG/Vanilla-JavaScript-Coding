@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events And Events Objects</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1 id="heading" class='myHead trim neither text' >Welcome To Code Made Trickers</h1>
+        <div class="child" id="first">Child 1
+            <ul class="this" id="myul">
+                <li class="childul">I am</li>
+                <li class="childul">Gaurav</li>
+                <li id='li3' class="childul">Bharat</li>
+                <li class="childul">Gangudre</li>
+                <li class="childul">from chandwad.</li>
+            </ul>
+        </div>
+        <div class="child" id="second">Child 2</div>
+        <div class="child" id="third">Child 3</div>
+        <div class="child" id="fourth">Child 4</div>
+
+        <form action="">
+            <label>Search this website :</label>
+            <input type="text" id="text">
+            <input type="submit" id="btn" value="Search">
+        </form>
+    </div>
+
+    <div class="no">This is a Div 1</div>
+    <div class="no">This is a Div 2</div>
+    <div class="no">This is a Div 3</div>
+
+    <script>
+
+document.getElementById('heading').addEventListener("click", function(e){
+    console.log("You have clicked the heading");
+    // location.href = "https://sppuexam.in/login";
+
+    let variable;
+
+    variable = e;
+    variable = e.target;
+    variable = e.target.className;
+    variable = Array.from(e.target.classList);   // convert into the array
+
+    variable = e.target.id;
+    varibale = e.offsetX;
+    varibale = e.offsetY;
+    varibale = e.clientX;
+    varibale = e.clientY;
+
+    console.log(variable);
+});
+    </script>
+    
+</body>
+</html>
